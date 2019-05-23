@@ -1,19 +1,13 @@
 # Bamazon
 
 ## Description
-An Amazon-like storefront that takes in orders from customers and depletes stock from the store's inventory.
+An Amazon-like storefront CLI that takes in orders from customers and depletes stock from the store's inventory.
 
 ## Dependencies and APIs
 
   * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
 
   * [Axios](https://www.npmjs.com/package/axios)
-
-  * [OMDB API](http://www.omdbapi.com)
-
-  * [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
-
-  * [Moment](https://www.npmjs.com/package/moment)
 
   * [DotEnv](https://www.npmjs.com/package/dotenv)
 
@@ -27,13 +21,7 @@ An Amazon-like storefront that takes in orders from customers and depletes stock
 
 1. `node liri.js concert-this <artist>`
 
-   * This will search the Bands in Town Artist Events API for an artist and render:
-
-     * Name of the venue
-
-     * Venue location
-
-     * Date of the Event (use moment to format this as "MM/DD/YYYY")
+se moment to format this as "MM/DD/YYYY")
 
 ![concert-this](assets/images/concert-this.png)
 Format: ![Alt Text](url)
@@ -41,12 +29,6 @@ Format: ![Alt Text](url)
 2. `node liri.js spotify-this-song '<song>'`
 
    * This will show the following information about the song:
-
-     * Artist(s)
-
-     * The song's name
-
-     * A preview link of the song from Spotify
 
      * The album that the song is from
 

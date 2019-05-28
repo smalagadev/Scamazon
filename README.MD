@@ -5,65 +5,63 @@ An Amazon-like storefront CLI that takes in orders from customers and depletes s
 
 ## Dependencies and APIs
 
-  * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
+  * [MySQL](https://www.npmjs.com/package/mysql)
 
-  * [Axios](https://www.npmjs.com/package/axios)
-
-  * [DotEnv](https://www.npmjs.com/package/dotenv)
-
-  * [File System](https://nodejs.org/api/fs.html)
-
-  * [MySQL]
-
-  * [Inquirer]
+  * [Inquirer](https://www.npmjs.com/package/inquirer)
 
 ## What Each Command Should Do
 
-1. `node liri.js concert-this <artist>`
+1. `node bamazonCustomer.js`
 
-se moment to format this as "MM/DD/YYYY")
+  * Run bamazon as a customer
 
-![concert-this](assets/images/concert-this.png)
-Format: ![Alt Text](url)
+    * The customer will be prompted two questions
 
-2. `node liri.js spotify-this-song '<song>'`
+    ```
+        The ID of the item they would like to buy.
+        The quantity of the item they would like to buy.
+    ```
 
-   * This will show the following information about the song:
+    * If there is enough in stock, they will be given the price needed to pay.
 
-     * The album that the song is from
+![bamazon-customer](assets/images/bamazon-customer-0.png)
 
-   * If no song is provided then your program will default to "The Sign" by Ace of Base.
+2. `node bamazonManager.js`
 
-![spotify-this](assets/images/spotify-this.png)
-Format: ![Alt Text](url)
+   * Run bamazon as a Manager
 
-3. `node liri.js movie-this '<movie name here>'`
+    * The Manager will be given 4 options:
 
-   * This will output the following information:
+      ```
+      * View Products for Sale
+      * View Low Inventory
+      * Add to Inventory
+      * Add New Product
+      ```
+
+    * Respectively, the following are images of each command.
+
+![view-product](assets/images/bamazon-manager-0.png)
+
+![view-inventory](assets/images/bamazon-manager-1.png)
+
+![add-inventory](assets/images/bamazon-manager-2.png)
+
+![add-new](assets/images/bamazon-manager-3.png)
+
+3. `node bamazonSupervisor.js`
+
+   * Run bamazon as a supervisor.
+
+   * Supervisor will have two options.
 
      ```
-       * Title of the movie.
-       * Year the movie came out.
-       * IMDB Rating of the movie.
-       * Rotten Tomatoes Rating of the movie.
-       * Country where the movie was produced.
-       * Language of the movie.
-       * Plot of the movie.
-       * Actors in the movie.
+     * View Product Sales by Department
+     * Create New Department
      ```
 
-   * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+    * Respectively, the following are images of each command.
 
-     * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
+![view-sales](assets/images/bamazon-supervisor-0.png)
 
-     * It's on Netflix!
-
-![movie-this](assets/images/movie-this.png)
-Format: ![Alt Text](url)
-
-4. `node liri.js do-what-it-says`
-
-   * LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
-![do-this](assets/images/do-this.png)
-Format: ![Alt Text](url)
+![new-department](assets/images/bamazon-supervisor-1.png)

@@ -15,7 +15,7 @@ CREATE TABLE Products(
 
 	stock_quantity INT NOT NULL,
 
-    product_sales DOUBLE DEFAULT 0,
+  product_sales DOUBLE DEFAULT 0,
 
    PRIMARY KEY(item_id)
 );
@@ -59,18 +59,18 @@ CREATE TABLE Departments(
 
 	over_head_costs DOUBLE NOT NULL,
 
-    total_profit DOUBLE NOT NULL,
+  total_profit DOUBLE DEFAULT 0,
 
-   PRIMARY KEY(department_id)
+  PRIMARY KEY(department_id)
 );
 
-INSERT INTO Departments (department_name, over_head_costs, total_profit)
-VALUES('Electronics', 1000.00, 0);
+INSERT INTO Departments (department_name, over_head_costs)
+VALUES('Electronics', 1000.00);
 
-INSERT INTO Departments (department_name, over_head_costs, total_profit)
-VALUES('Clothing', 800.00, 0);
+INSERT INTO Departments (department_name, over_head_costs)
+VALUES('Clothing', 800.00);
 
-INSERT INTO Departments (department_name, over_head_costs, total_profit)
-VALUES('Cleaning', 150.00, 0);
+INSERT INTO Departments (department_name, over_head_costs)
+VALUES('Cleaning', 150.00);
 
 SELECT * FROM Departments;

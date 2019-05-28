@@ -13,7 +13,7 @@ inquirer.prompt([
     if(action.option == 'View Product Sales by Department'){
       query = `SELECT * FROM Departments`;
       sql.query(query, function(err, res){
-        console.log(`Dept. ID\tDept. Name\t\t Over Head Costs `);
+        console.log(`Dept. ID\tDept. Name\t\tOver Head Costs `);
         res.forEach(data => {
           console.log(`${data.department_id}\t\t${data.department_name}\t\t${data.over_head_costs}`);
         });
